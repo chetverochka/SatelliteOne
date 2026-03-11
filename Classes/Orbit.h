@@ -19,7 +19,7 @@ protected:
 	void redrawOrbitCircle(const float radius, const float offset, const cocos2d::Vec2& center, const float gap, const float dash);
 private:
 	cocos2d::DrawNode* _canvas;
-
+	cocos2d::Vec2 _orbitPosition;
 	float _orbitRotation;
 };
 

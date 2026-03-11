@@ -7,6 +7,7 @@ const float Orbit::ROTATE_VELOCITY = 2.f;
 Orbit::Orbit() {
 	_orbitRotation = 0.f;
 	_canvas = NULL;
+	_orbitPosition = ccp(0, 0);
 }
 
 bool Orbit::init() {

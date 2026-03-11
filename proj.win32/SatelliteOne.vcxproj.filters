@@ -69,6 +69,9 @@
     <ClInclude Include="..\Classes\Orbit.h">
       <Filter>Source Files\Classes</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\Definitions.h">
+      <Filter>Source Files\Classes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="D:\projectscpp\cocos2d\SatelliteOne\CMakeLists.txt" />

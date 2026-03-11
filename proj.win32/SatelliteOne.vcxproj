@@ -199,6 +199,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Classes\Definitions.h" />
     <ClInclude Include="..\Classes\Orbit.h" />
     <ClInclude Include="..\Classes\OrbitData.h" />
     <ClInclude Include="..\Classes\PlayLayer.h" />
