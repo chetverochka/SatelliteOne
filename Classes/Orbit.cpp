@@ -1,5 +1,5 @@
 #include "Orbit.h"
-
+#include "Meteorite.h"
 USING_NS_CC;
 
 const float Orbit::ROTATE_VELOCITY = 2.f;
@@ -8,6 +8,8 @@ Orbit::Orbit() {
 	_orbitRotation = 0.f;
 	_canvas = NULL;
 	_orbitPosition = ccp(0, 0);
+	_orbitRadius = 300.f;
+	_reversedRotating = false;
 }
 
 bool Orbit::init() {
@@ -28,13 +30,16 @@ bool Orbit::init() {
 		return false;
 	}
 
+	Meteorite* obj = Meteorite::createSpecific(1);
+	addChild(obj);
+
 	return true;
 }
 
 void Orbit::update(float deltaTime) {
 	Node::update(deltaTime);
 
-	const float reversedSpeed = false;
+	const float reversedSpeed = _reversedRotating;
 	const float speedMultiplier = 1.f;
 	const float orbitRotateSpeed = ROTATE_VELOCITY * speedMultiplier * deltaTime * (reversedSpeed ? -1 : 1);
 	const float newOrbitRotation = getOrbitRotation() + orbitRotateSpeed;
@@ -42,18 +47,61 @@ void Orbit::update(float deltaTime) {
 	setOrbitRotation(newOrbitRotation);
 }
 
+void Orbit::setPaused(bool paused) {
+	if (isPaused() != paused) {
+		if (paused)
+			pause();
+		else
+			resume();
+	}
+}
+
+bool Orbit::isPaused() {
+	return getScheduler()->isTargetPaused(this);
+}
+
 void Orbit::setOrbitRotation(float rotation) {
 	if (_orbitRotation != rotation) {
-
-		const float orbitRadius = 300.f;
-		redrawOrbitCircle(orbitRadius, _orbitRotation, Vec2(0,0), 20, 40);
-
 		_orbitRotation = rotation;
+		redrawOrbitCircle();
 	}
+}
+
+void Orbit::setOrbitPosition(const Vec2& point) {
+	if (_orbitPosition != point) {
+		_orbitPosition = point;
+		redrawOrbitCircle();
+	}
+}
+
+void Orbit::setOrbitRadius(float radius) {
+	if (_orbitRadius != radius) {
+		_orbitRadius = radius;
+		redrawOrbitCircle();
+	}
+}
+
+void Orbit::setRotationReversed(bool reversed) {
+	if (_reversedRotating != reversed) {
+		_reversedRotating = reversed;
+	}
+}
+
+
+Vec2 Orbit::getOrbitPosition() const {
+	return _orbitPosition;
 }
 
 float Orbit::getOrbitRotation() const {
 	return _orbitRotation;
+}
+
+float Orbit::getOrbitRadius() const {
+	return _orbitRadius;
+}
+
+bool Orbit::isRotationReversed() const {
+	return _reversedRotating;
 }
 
 //void Orbit::redrawOrbitCircle(const float radius, const float offset, const float dottedGap, const unsigned int dottedCount) {
@@ -108,4 +156,8 @@ void Orbit::redrawOrbitCircle(const float radius, const float offset, const coco
 
 		_canvas->drawLine(origin, destination, Color4F::WHITE);
 	}
+}
+
+void Orbit::redrawOrbitCircle() {
+	redrawOrbitCircle(_orbitRadius, _orbitRotation, _orbitPosition, 20, 40);
 }
