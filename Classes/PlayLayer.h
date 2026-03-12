@@ -2,6 +2,7 @@
 #define __PLAY_LAYER_H__
 
 #include "cocos2d.h"
+#include "OrbitObject.h"
 
 // my bad "god" class
 class PlayLayer : public cocos2d::CCLayer {
@@ -16,9 +17,11 @@ public:
 	void update(float deltaTime) override;
 
 	bool initWithConfig(InitialConfig& config);
+
 private:
 	cocos2d::Sprite* _planetSprite;
 	cocos2d::DrawNode* _orbitsDraw;
+	cocos2d::Vector<OrbitObject*> _allOrbitObjects;
 
 	InitialConfig _initialConfig;
 };

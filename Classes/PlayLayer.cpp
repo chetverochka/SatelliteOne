@@ -55,9 +55,12 @@ bool PlayLayer::initWithConfig(InitialConfig& config) {
 	}
 	addChild(_orbitsDraw, 1);
 
-	Orbit* orbit = Orbit::create();
-	addChild(orbit, 10);
-	orbit->setPosition(_planetSprite->getPosition());
+	for (int i = 0; i < 100; i++) {
+		Orbit* orbit = Orbit::create();
+		orbit->setOrbitPosition(_planetSprite->getPosition());
+		orbit->setOrbitRadius(300 + i * 120);
+		addChild(orbit, 0);
+	}
 
 	return true;
 }

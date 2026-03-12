@@ -18,6 +18,7 @@ public:
 	void onExit() override;
 	void update(float deltaTime) override;
 
+	void setOrbit(Orbit* orbit);
 	void setPaused(bool paused) override;
 	void setOrbitalAngle(float degrees);
 

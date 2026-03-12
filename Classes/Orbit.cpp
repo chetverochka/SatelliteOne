@@ -10,6 +10,7 @@ Orbit::Orbit() {
 	_orbitPosition = ccp(0, 0);
 	_orbitRadius = 300.f;
 	_reversedRotating = false;
+	_objects = {};
 }
 
 bool Orbit::init() {
@@ -17,7 +18,7 @@ bool Orbit::init() {
 		return false;
 	}
 
-	setIgnoreAnchorPointForPosition(false);
+	//setIgnoreAnchorPointForPosition(false);
 	setCascadeColorEnabled(true);
 	setCascadeOpacityEnabled(true);
 	scheduleUpdate();
@@ -29,9 +30,6 @@ bool Orbit::init() {
 	else {
 		return false;
 	}
-
-	Meteorite* obj = Meteorite::createSpecific(1);
-	addChild(obj);
 
 	return true;
 }
@@ -58,6 +56,20 @@ void Orbit::setPaused(bool paused) {
 
 bool Orbit::isPaused() {
 	return getScheduler()->isTargetPaused(this);
+}
+
+void Orbit::addOrbitObject(OrbitObject* object) {
+	if (_objects.contains(object))
+		return;
+	object->setOrbit(this);
+	_objects.pushBack(object);
+}
+
+void Orbit::removeOrbitObject(OrbitObject* object) {
+	if (!_objects.contains(object))
+		return;
+	object->setOrbit(NULL);
+	_objects.eraseObject(object);
 }
 
 void Orbit::setOrbitRotation(float rotation) {
@@ -98,6 +110,10 @@ float Orbit::getOrbitRotation() const {
 
 float Orbit::getOrbitRadius() const {
 	return _orbitRadius;
+}
+
+Vector<OrbitObject*> Orbit::getOrbitObjects() {
+	return _objects;
 }
 
 bool Orbit::isRotationReversed() const {
@@ -159,5 +175,5 @@ void Orbit::redrawOrbitCircle(const float radius, const float offset, const coco
 }
 
 void Orbit::redrawOrbitCircle() {
-	redrawOrbitCircle(_orbitRadius, _orbitRotation, _orbitPosition, 20, 40);
+	redrawOrbitCircle(_orbitRadius, _orbitRotation, _orbitPosition, 30, 15);
 }

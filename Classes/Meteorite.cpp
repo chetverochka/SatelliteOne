@@ -5,12 +5,17 @@ Meteorite* Meteorite::createSpecific(int typeId) {
 
 	switch (typeId) {
 	default:
-	case 1: // add more types
+	case 1:
+		ret->setSpriteFrame("SO_Meteorite_1.png");
+		break;
 	case 2:
+		ret->setSpriteFrame("SO_Meteorite_2.png");
+		break;
 	case 3:
+		ret->setSpriteFrame("SO_Meteorite_3.png");
+		break;
 	case 4:
-	case 5:
-		ret->setTexture("CloseNormal.png");
+		ret->setSpriteFrame("SO_Meteorite_4.png");
 		break;
 	}
 

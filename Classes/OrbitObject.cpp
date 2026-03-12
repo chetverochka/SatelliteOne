@@ -44,6 +44,10 @@ void OrbitObject::update(float deltaTime) {
 	}
 }
 
+void OrbitObject::setOrbit(Orbit* orbit) {
+	_parentOrbit = orbit;
+}
+
 void OrbitObject::setPaused(bool paused) {
 	if (isPaused() != paused) {
 		if (paused)

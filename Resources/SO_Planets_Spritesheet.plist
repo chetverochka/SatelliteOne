@@ -4,6 +4,66 @@
     <dict>
         <key>frames</key>
         <dict>
+            <key>SO_Meteorite_1.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{164,160}</string>
+                <key>spriteSourceSize</key>
+                <string>{164,160}</string>
+                <key>textureRect</key>
+                <string>{{0,0},{164,160}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>SO_Meteorite_2.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{219,219}</string>
+                <key>spriteSourceSize</key>
+                <string>{219,219}</string>
+                <key>textureRect</key>
+                <string>{{166,0},{219,219}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>SO_Meteorite_3.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{258,244}</string>
+                <key>spriteSourceSize</key>
+                <string>{258,244}</string>
+                <key>textureRect</key>
+                <string>{{387,0},{258,244}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>SO_Meteorite_4.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{118,108}</string>
+                <key>spriteSourceSize</key>
+                <string>{118,108}</string>
+                <key>textureRect</key>
+                <string>{{647,0},{118,108}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
             <key>SO_Planet_1.png</key>
             <dict>
                 <key>aliases</key>
@@ -15,7 +75,7 @@
                 <key>spriteSourceSize</key>
                 <string>{462,462}</string>
                 <key>textureRect</key>
-                <string>{{0,0},{462,462}}</string>
+                <string>{{767,0},{462,462}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -30,7 +90,7 @@
                 <key>spriteSourceSize</key>
                 <string>{462,462}</string>
                 <key>textureRect</key>
-                <string>{{464,0},{462,462}}</string>
+                <string>{{1231,0},{462,462}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -45,7 +105,7 @@
                 <key>spriteSourceSize</key>
                 <string>{462,462}</string>
                 <key>textureRect</key>
-                <string>{{928,0},{462,462}}</string>
+                <string>{{0,464},{462,462}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -60,7 +120,7 @@
                 <key>spriteSourceSize</key>
                 <string>{462,462}</string>
                 <key>textureRect</key>
-                <string>{{1392,0},{462,462}}</string>
+                <string>{{464,464},{462,462}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -78,7 +138,7 @@
             <key>size</key>
             <string>{2048,2048}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:112dfc9a2930611a2184ee6f3d881d61:40dfedf899cb74167a71c19550262d06:0c57d5762a2ce7cb3a14a8255f6e5d99$</string>
+            <string>$TexturePacker:SmartUpdate:94e9a8eb7bf35a2595cf71c47abb09cf:9ed9e1201bd0e877a038609072eec41b:0c57d5762a2ce7cb3a14a8255f6e5d99$</string>
             <key>textureFileName</key>
             <string>SO_Planets_Spritesheet.png</string>
         </dict>

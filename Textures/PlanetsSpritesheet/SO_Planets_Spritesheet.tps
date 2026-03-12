@@ -179,6 +179,66 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
+            <key type="filename">SO_Meteorite_1.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>41,40,82,80</rect>
+                <key>scale9Paddings</key>
+                <rect>41,40,82,80</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">SO_Meteorite_2.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>55,55,109,109</rect>
+                <key>scale9Paddings</key>
+                <rect>55,55,109,109</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">SO_Meteorite_3.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>65,61,129,122</rect>
+                <key>scale9Paddings</key>
+                <rect>65,61,129,122</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">SO_Meteorite_4.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>30,27,59,54</rect>
+                <key>scale9Paddings</key>
+                <rect>30,27,59,54</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">SO_Planet_1.png</key>
             <key type="filename">SO_Planet_2.png</key>
             <key type="filename">SO_Planet_3.png</key>
@@ -208,6 +268,10 @@
                     <filename>SO_Planet_2.png</filename>
                     <filename>SO_Planet_3.png</filename>
                     <filename>SO_Planet_4.png</filename>
+                    <filename>SO_Meteorite_1.png</filename>
+                    <filename>SO_Meteorite_2.png</filename>
+                    <filename>SO_Meteorite_3.png</filename>
+                    <filename>SO_Meteorite_4.png</filename>
                 </array>
             </struct>
         </map>
